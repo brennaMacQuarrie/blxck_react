@@ -10,7 +10,5 @@ export default function ImageSection(props) {
                 backgroundPosition: 'center center',
             }}
         />
-        
-      
     );
   }
