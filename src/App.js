@@ -3,6 +3,8 @@ import ImageSection from './components/_common/ImageSection';
 import NavBar from './components/NavBar'
 import TextSection from './components/_common/TextSection';
 import Accordion from './components/Accordion';
+import Services from './components/Services';
+import TextBlock from './components/_common/TextBlock';
 
 function App() {
   return (
@@ -16,28 +18,30 @@ function App() {
           <h2 className="text-xl md:text-2xl font-Russo tracking-wider">Digital Strategy // Marketing</h2>
         </div>
       </header>
+
       <TextSection title={'About us'} direction={'left'}>
-        <span className='w-full text-gray-400'>
-          We are a canadian based advertising agency, but our clients and reach stretch around the globe.
-          We believe that any business can succeed.
-        </span>
-        <br /><br />
-        <span className='w-full'>
-          Our mission is to heighten the potency of your marketing efforts by giving you the most effective ad stragety possible.</span>
+        <TextBlock 
+          textBlockOne={"We are a canadian based advertising agency, but our clients and reach stretch around the globe. We believe that any business can succeed."}
+          textBlockTwo={"Our mission is to heighten the potency of your marketing efforts by giving you the most effective ad stragety possible."}
+        />
       </TextSection>
 
       <ImageSection image={'/greg-rakozy-oMpAz-DN-9I-unsplash.jpg'} />
 
       <TextSection title={'What we do'} direction={'left'}>
-        <span className='w-full text-gray-400'>We support you by expanding or developing your business's organic growth and brand recognition.</span>
-        <br /><br />
-        <span className='w-full'>We do this by supplementing your natural appeal with our expertise in ad buys.</span>
+        <TextBlock 
+          textBlockOne={"We support you by expanding or developing your business's organic growth and brand recognition."}
+          textBlockTwo={"We do this by supplementing your natural appeal with our expertise in ad buys."}
+        />
       </TextSection>
 
       <ImageSection image={'/epic-earth-rotate-sunlight-glow-starry-galaxy-2021-08-29-03-57-26-utc.jpg'} />
 
-      <TextSection title={'Our services'} direction={'left'}>
-        <Accordion />
+      <TextSection 
+        title={'Our services'} 
+        direction={'left'}
+      >
+        <Services />
       </TextSection>
 
       <ImageSection image={'/mathew-schwartz-7YiZKj9A3DM-unsplash.jpg'} />

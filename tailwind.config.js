@@ -1,9 +1,22 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
+  variants: {
+    textColor: ['hover', 'focus', 'group-hover'],
+  },
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    extend: {
+      colors: {
+        'blx-gold': '#e7c376',
+        'blx-blue': '#7ebec5',
+      },
+      transitionProperty: {
+        'width': 'width',
+      }
+    },
     fontFamily: {
       Blackout: ["Blackout", "sans-serif"],
       Russo: ["Russo", "sans-serif"],
@@ -19,11 +32,7 @@ module.exports = {
       '4xl': '6rem',
       '5xl': '7rem',
     },
-    extend: {
-      transitionProperty: {
-        'width': 'width',
-      }
-    },
+    
   },
   plugins: [],
 }
