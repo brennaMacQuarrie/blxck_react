@@ -5,6 +5,7 @@ import TextSection from './components/_common/TextSection';
 import Services from './components/Services';
 import TextBlock from './components/_common/TextBlock';
 import ContactForm from './components/ContactForm';
+import ContactSection from './components/ContactSection';
 
 function App() {
   return (
@@ -50,10 +51,7 @@ function App() {
         <ContactForm />
       </TextSection>
       
-      <TextSection 
-        direction={'left'}
-      >
-      </TextSection>
+      <ContactSection />
     </div>
   );
 }

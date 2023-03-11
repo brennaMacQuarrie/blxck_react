@@ -88,7 +88,7 @@ function ServiceBlock({ id, title, content, Icon, isActive, isHidden, toggleActi
                     {title}
                 </h3>
             </button>
-            <div className={`${isActive ? 'bottom-3' : 'hidden'} relative w-[800px] bottom-[-60px] transition-all font-thin text-xl font-Russo`}>
+            <div className={`${isActive ? 'bottom-0' : 'hidden'} relative w-[800px] bottom-[-60px] transition-all font-thin text-xl font-Russo`}>
                 {content}
             </div>
         </div>
