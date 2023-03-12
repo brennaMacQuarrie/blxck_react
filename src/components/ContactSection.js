@@ -4,9 +4,9 @@ import { MdEmail} from 'react-icons/md'
 
 export default function ContactSection() {
     return (
-        <div className='ContactSection flex justify-center items-center'>
-            <div className='text-center flex flex-col items-center'>
-                <h4 className='font-Russo text-blx-gold text-xl tracking-widest'>Contact Address</h4>
+        <div className='ContactSection flex justify-center'>
+            <div className='text-center flex flex-col items-center pt-20'>
+                <h4 className='text-base sm:text-xl font-Russo text-blx-gold text-xl tracking-widest'>Contact Address</h4>
                 <a 
                     aria-label='click to send us an email' 
                     target='_blank' 

@@ -51,14 +51,14 @@ export default function ContactForm() {
             <FormField>
                 <label htmlFor="subject">I want help with</label>
                 <select name="subject" id="subject" required className='text-base sm:text-lg text-blx-gold bg-black border-b border-white pl-1 focus:outline-none focus:bg-white/20'>
-                    <option value="" disabled selected>select your support type</option>
+                    <option value="" disabled defaultValue>select your support type</option>
                     { supportOptions.map(option => <option key={option.id} value={option.id}>{option.text}</option>) }
                 </select>
             </FormField>
             <FormField>
                 <label htmlFor="budget">My project budget is</label>
                 <select name="budget" id="budget" required className='text-base sm:text-lg text-blx-gold bg-black border-b border-white pl-1 focus:outline-none focus:bg-white/20'>
-                    <option value="" disabled selected>select your budget</option>
+                    <option value="" disabled defaultValue>select your budget</option>
                     { budgetOptions.map(option => <option className='text-blx-gold' key={option.id} value={option.id}>{option.text}</option>) }
                 </select>
             </FormField>

@@ -8,10 +8,19 @@
 }
 
 .ContactSection {
-  min-height: 100vh;
+  height: 80vh;
   background-image: url('../public/thing3.jpg');
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
+}
+
+.AnimatedSpinner {
+  min-height: 100vh;
+  background-color: black;
+  background-image: url('../public/neon.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
 }
 

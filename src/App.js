@@ -6,21 +6,15 @@ import Services from './components/Services';
 import TextBlock from './components/_common/TextBlock';
 import ContactForm from './components/ContactForm';
 import ContactSection from './components/ContactSection';
+import HeadingSection from './components/HeadingSection';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App overflow-hidden">
       <NavBar></NavBar>
-      <header className="App-header flex flex-col justify-center items-center" id="home">
-        <div>
-          <h1 className='text-3xl sm:text-4xl md:text-5xl md:text-5xl font-Blackout leading-none'>
-            Grow your <br />brand
-          </h1>
-          <h2 className="text-xl md:text-2xl font-Russo tracking-wider">Digital Strategy // Marketing</h2>
-        </div>
-      </header>
+      <HeadingSection />
 
-      <TextSection title={'About us'} direction={'left'}>
+      <TextSection title={'About us'} direction={'right'}>
         <TextBlock 
           textBlockOne={"We are a canadian based advertising agency, but our clients and reach stretch around the globe. We believe that any business can succeed."}
           textBlockTwo={"Our mission is to heighten the potency of your marketing efforts by giving you the most effective ad stragety possible."}
@@ -38,14 +32,18 @@ function App() {
 
       <ImageSection image={'/epic-earth-rotate-sunlight-glow-starry-galaxy-2021-08-29-03-57-26-utc.jpg'} />
 
-      <TextSection 
-        title={'Our services'} 
-        direction={'left'}
-      >
+      <TextSection title={'Our services'} direction={'right'}>
         <Services />
       </TextSection>
 
-      <ImageSection image={'/mathew-schwartz-7YiZKj9A3DM-unsplash.jpg'} />
+      {/* <ImageSection image={'/mathew-schwartz-7YiZKj9A3DM-unsplash.jpg'} /> */}
+      <div className='bg-black h-screen w-screen relative'>
+        <img 
+          src={require('./images/neon.png')}  
+          alt='neon spinning light' 
+          className='absolute top-0 left-0 right-0 margin-auto translate-x-[50%] h-[506px]'
+        />
+      </div>
 
       <TextSection title={'Contact'} direction={'left'}>
         <ContactForm />
