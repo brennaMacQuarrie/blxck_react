@@ -31,8 +31,7 @@ export default function HeadingSection() {
         }, container);
         return () => ctx.revert();
     }, []);
-    return (
-        <header ref={container} className="App-header flex flex-col items-center pt-60 md:pt-40" id="home">
+    return ( <header ref={container} className="App-header flex flex-col items-center pt-60 md:pt-40" id="home">
         <div className='px-8 sm:px-0'>
           <h1 className='text-3xl sm:text-4xl md:text-5xl md:text-5xl font-Blackout leading-none'>
             <p ref={moveRight}>Grow your</p>

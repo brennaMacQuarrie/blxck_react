@@ -7,11 +7,13 @@ import TextBlock from './components/_common/TextBlock';
 import ContactForm from './components/ContactForm';
 import ContactSection from './components/ContactSection';
 import HeadingSection from './components/HeadingSection';
+import VerticalNavBar from './components/VerticalNavBar';
 
 function App() {
   return (
     <div className="App overflow-hidden">
-      <NavBar></NavBar>
+      <NavBar />
+      <VerticalNavBar />
       <HeadingSection />
 
       <TextSection title={'About us'} direction={'right'}>
@@ -36,14 +38,7 @@ function App() {
         <Services />
       </TextSection>
 
-      {/* <ImageSection image={'/mathew-schwartz-7YiZKj9A3DM-unsplash.jpg'} /> */}
-      <div className='bg-black h-screen w-screen relative'>
-        <img 
-          src={require('./images/neon.png')}  
-          alt='neon spinning light' 
-          className='absolute top-0 left-0 right-0 margin-auto translate-x-[50%] h-[506px]'
-        />
-      </div>
+      <ImageSection image={'/mathew-schwartz-7YiZKj9A3DM-unsplash.jpg'} />
 
       <TextSection title={'Contact'} direction={'left'}>
         <ContactForm />

@@ -81,7 +81,7 @@ export default function Services() {
 
 function ServiceBlock({ id, title, content, Icon, isActive, isHidden, toggleActive }) {
     return (
-        <div className={`${isActive ? 'absolute top-0 left-0 z-50 h-full w-screen hover:bg-black' : 'hover:bg-transparent'} ${isHidden ? 'hidden' : ''} group w-[400px] min-h-40 flex flex-col items-center justify-center gap-5 border-white/40 border-2 bg-black transition-bg duration-500 hover:border-transparent`}>
+        <div className={`${isActive ? 'absolute top-0 left-0 z-30 h-full w-screen hover:bg-black' : 'hover:bg-transparent'} ${isHidden ? 'hidden' : ''} group w-[400px] min-h-40 flex flex-col items-center justify-center gap-5 border-white/40 border-2 bg-black transition-bg duration-500 hover:border-transparent`}>
             <button onClick={() => toggleActive(id)} className='w-full flex flex-col items-center gap-2'>
                 <Icon className='min-h-[50px] min-w-[50px]' />
                 <h3 className={`${isActive ? `!text-xl md:!text-2xl` : ``} w-full text-base md:text-xl font-SpaceAge transition-scale duration-300 group-hover:scale-105 text-blx-blue group-hover:text-blx-gold`}>
