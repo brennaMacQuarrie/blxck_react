@@ -14,13 +14,3 @@
   background-position: center bottom;
   background-size: cover;
 }
-
-.AnimatedSpinner {
-  min-height: 100vh;
-  background-color: black;
-  background-image: url('../public/neon.png');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center top;
-}
-

@@ -31,13 +31,13 @@ export default function HeadingSection() {
         }, container);
         return () => ctx.revert();
     }, []);
-    return ( <header ref={container} className="App-header flex flex-col items-center pt-60 md:pt-40" id="home">
+    return ( <header ref={container} className="App-header flex flex-col items-center pt-60" id="home">
         <div className='px-8 sm:px-0'>
-          <h1 className='text-3xl sm:text-4xl md:text-5xl md:text-5xl font-Blackout leading-none'>
+          <h1 className='text-3xl sm:text-5xl md:text-5xl md:text-5xl font-Blackout leading-none'>
             <p ref={moveRight}>Grow your</p>
             <p ref={moveLeft}>brand</p>
           </h1>
-          <h2 className="text-xl md:text-2xl font-Russo tracking-wider">Digital Strategy <span className='white-stroke font-bold'>//</span> Marketing</h2>
+          {/* <h2 className="text-xl md:text-2xl font-Russo tracking-wider">Digital Strategy <span className='white-stroke font-bold'>//</span> Marketing</h2> */}
         </div>
       </header>
     )

@@ -5,7 +5,7 @@ import { MdEmail } from 'react-icons/md'
 import { SiGooglemaps } from 'react-icons/si'
 
 export default function VerticalNavBar() {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
 
     const container = useRef();
     const circle = useRef();
@@ -31,48 +31,60 @@ export default function VerticalNavBar() {
         return () => ctx.revert();
     });
 
-    const openMenu = () => {
+    const toggleMenu = () => {
         setIsOpen(isOpen => !isOpen)
         gsap.to(menu.current, { 
-            height: isOpen ? 240 : 0,
+            height: isOpen ? 0 : 280,
         });
     };
 
     return (
-        <button class='fixed top-4 right-4 cursor-pointer rounded-full focus:outline-none focus-visible:bg-white/40' onClick={openMenu}>
-            <div ref={container} className='block'>
+        <div class='fixed top-5 right-16 cursor-pointer rounded-full focus:outline-none focus-visible:bg-white/40'>
+            <button ref={container} className='block' onClick={toggleMenu}>
                 <img 
                     ref={circle}
-                    src={require('../images/neon.png')}  
-                    alt='neon spinning light' 
-                    className='h-12 w-12 margin-auto'
+                    src={require('../images/blxck_round_logo.png')}  
+                    alt='neon ring logo' 
+                    className='h-10 w-10'
                 />
-            </div>
-            <div ref={menu} className='z-50 absolute top-16 right-0 w-12 h-0 bg-white/20 flex flex-col justify-center items-center rounded-md'>
-                <div className='h-full flex flex-col justify-between py-10'>
-                    <BsTelephone 
-                        aria-label='click to initiate a phone call' 
-                        target='_blank' 
-                        rel='noopener noreferrer' 
-                        href="tel:780-722-0646" 
-                        className='h-6 w-6' 
-                    />
-                    <MdEmail 
-                        aria-label='click to send us an email' 
-                        target='_blank' 
-                        rel='noopener noreferrer' 
-                        href="mailto:blxckmarketing@gmail.com" 
-                        className='h-6 w-6' 
-                    />
-                    <SiGooglemaps 
-                        aria-label='click to open our location on google maps' 
-                        target='_blank' 
-                        rel='noopener noreferrer' 
-                        href='https://www.google.com/maps/place/BLXCK+marketing/@53.5529256,-113.5247396,15z/data=!4m2!3m1!1s0x0:0x1186dd76a63a1c34?sa=X&ved=2ahUKEwj0p4n54dT9AhUnIjQIHex-BcQQ_BJ6BAhgEAg'
-                        className='h-6 w-6' 
+            </button>
+            <div ref={menu} className={`${isOpen ? 'top-16 transition-top duration-75' : 'top-8'} z-50 absolute right-0 w-10 h-0`}>
+                <div className="h-full w-full flex flex-col items-center gap-6">
+                    <div className='h-full w-full bg-white/10 rounded-md flex flex-col gap-10 justify-center items-center'>
+                        <a 
+                            aria-label='click to initiate a phone call' 
+                            target='_blank' 
+                            rel='noopener noreferrer' 
+                            href="tel:780-722-0646" 
+                        >
+                            <BsTelephone className={`${isOpen ? 'h-6 w-6' : 'h-0'} transition-height duration-500`}/>
+                        </a>
+                        <a
+                            aria-label='click to send us an email' 
+                            target='_blank' 
+                            rel='noopener noreferrer' 
+                            href="mailto:blxckmarketing@gmail.com" 
+                        >
+                            <MdEmail className={`${isOpen ? 'h-6 w-6' : 'h-0'} transition-height duration-500`}/>
+                        </a>
+                        <a
+                            aria-label='click to open our location on google maps' 
+                            target='_blank' 
+                            rel='noopener noreferrer' 
+                            href='https://www.google.com/maps/place/BLXCK+marketing/@53.5529256,-113.5247396,15z/data=!4m2!3m1!1s0x0:0x1186dd76a63a1c34?sa=X&ved=2ahUKEwj0p4n54dT9AhUnIjQIHex-BcQQ_BJ6BAhgEAg'
+                        >
+                            <SiGooglemaps className={`${isOpen ? 'h-6 w-6' : 'h-0'} transition-height duration-500`}/>
+                        </a>
+                    </div>
+                    <img 
+                        onClick={toggleMenu}
+                        ref={circle}
+                        src={require('../images/blxck_round_logo.png')}  
+                        alt='neon ring logo' 
+                        className='h-8 w-8'
                     />
                 </div>
             </div>
-        </button>
+        </div>
     )
 }

@@ -7,13 +7,11 @@ import TextBlock from './components/_common/TextBlock';
 import ContactForm from './components/ContactForm';
 import ContactSection from './components/ContactSection';
 import HeadingSection from './components/HeadingSection';
-import VerticalNavBar from './components/VerticalNavBar';
 
 function App() {
   return (
     <div className="App overflow-hidden">
       <NavBar />
-      <VerticalNavBar />
       <HeadingSection />
 
       <TextSection title={'About us'} direction={'right'}>

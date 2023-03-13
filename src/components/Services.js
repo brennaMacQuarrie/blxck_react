@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import gsap from "gsap";
+import React, { useState, useRef } from 'react'
 import { 
     WiMoonAltFull, 
     WiMoonAltWaxingCrescent1, 
@@ -8,8 +9,8 @@ import {
     WiMoonAltNew } from 'react-icons/wi'
 
 export default function Services() {
-    const [activeItem, setActiveItem] = useState('')
-
+    const [activeItem, setActiveItem] = useState('');
+    const block = useRef();
     const services = [
         {
             id: 'branding',
@@ -49,7 +50,6 @@ export default function Services() {
         },
     ]
 
-
     const toggleActive = (id) => {
         if (id !== activeItem) {
             setActiveItem(id)
@@ -64,6 +64,7 @@ export default function Services() {
             { services.map((service, index) => {
                 return (
                     <ServiceBlock
+                        ref={block}
                         key={service.id}
                         id={service.id} 
                         Icon={service.Icon}
@@ -78,19 +79,25 @@ export default function Services() {
         </div>
     )
 }
-
-function ServiceBlock({ id, title, content, Icon, isActive, isHidden, toggleActive }) {
+// {`${isActive ? 'absolute top-0 left-0 z-30 h-full w-screen hover:bg-black' : '
+function ServiceBlock({ id, title, content, Icon, isActive, toggleActive }) {
     return (
-        <div className={`${isActive ? 'absolute top-0 left-0 z-30 h-full w-screen hover:bg-black' : 'hover:bg-transparent'} ${isHidden ? 'hidden' : ''} group w-[400px] min-h-40 flex flex-col items-center justify-center gap-5 border-white/40 border-2 bg-black transition-bg duration-500 hover:border-transparent`}>
-            <button onClick={() => toggleActive(id)} className='w-full flex flex-col items-center gap-2'>
+        <div className="group w-[400px] min-h-40 flex flex-col items-center justify-center gap-5 border-white/40 border-2 bg-black transition-bg duration-500">
+            <button onClick={() => toggleActive(id)} className='w-full flex flex-col items-center gap-2 bg-black hover:bg-transparent'>
                 <Icon className='min-h-[50px] min-w-[50px]' />
-                <h3 className={`${isActive ? `!text-xl md:!text-2xl` : ``} w-full text-base md:text-xl font-SpaceAge transition-scale duration-300 group-hover:scale-105 text-blx-blue group-hover:text-blx-gold`}>
+                <h3 className="w-full text-base md:text-xl font-SpaceAge transition-scale duration-300 group-hover:scale-105 text-blx-blue group-hover:text-blx-gold">
                     {title}
                 </h3>
             </button>
-            <div className={`${isActive ? 'bottom-0' : 'hidden'} relative w-[800px] bottom-[-60px] transition-all font-thin text-xl font-Russo`}>
-                {content}
-            </div>
+            <button onClick={() => toggleActive(id)} className={`${isActive ? 'h-full z-30' : 'h-0'} absolute top-0 w-full flex flex-col justify-center items-center transition-height duration-700 font-thin text-xl font-Russo bg-black`}>
+                <Icon className={`${isActive ? 'min-h-[50px] min-w-[50px]' : 'w-0'} transition-width duration-300`} />
+                <h3 className={`${isActive ? 'opacity-100' : 'opacity-0'} text-3xl text-blx-blue font-SpaceAge transition-opacity duration-300 delay-300`}>
+                    {title}
+                </h3>
+                <span className={`${isActive ? 'opacity-100' : 'opacity-0'} px-16 transition-opacity duration-300 delay-300`}>
+                    {content}
+                </span>
+            </button>
         </div>
     )
 }

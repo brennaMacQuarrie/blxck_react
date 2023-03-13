@@ -12,7 +12,7 @@ export default function TextSection(props) {
         let ctx = gsap.context(() => {
             gsap.from(heading.current, {
                 x: props.direction === 'right' ? -500 : 500,
-                duration: 10, 
+                duration: 6, 
                 scrollTrigger: {
                     trigger: container.current,
                     toggleActions: "restart pause resume reset",
