@@ -36,7 +36,7 @@ function App() {
         <Services />
       </TextSection>
 
-      <ImageSection image={'/mathew-schwartz-7YiZKj9A3DM-unsplash.jpg'} />
+      <ImageSection image={'/solar-eclipse-by-a-lunar-event-with-ring-of-fire-2021-08-29-03-57-26-utc.jpg'} />
 
       <TextSection title={'Contact'} direction={'left'}>
         <ContactForm />

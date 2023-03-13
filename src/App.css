@@ -1,10 +1,11 @@
 .App-header {
   min-height: 100vh;
   background-color: black;
-  background-image: url('../public/header-image.png');
+  background-image: url('../public/earth4.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center top;
+  background-size: cover;
 }
 
 .ContactSection {
