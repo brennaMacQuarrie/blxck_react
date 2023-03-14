@@ -13,16 +13,18 @@ export default function HeadingSection() {
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
             gsap.to(moveRight.current, {
-                x: -1000,
-                duration: 10, 
+                x: -300,
+                opacity: 0,
+                duration: 8, 
                 scrollTrigger: {
                     toggleActions,
                     scrub: true,
                 },
             })
             gsap.to(moveLeft.current, {
-                x: 1000,
-                duration: 10, 
+                x: 300,
+                opacity: 0,
+                duration: 8, 
                 scrollTrigger: {
                     toggleActions,                    
                     scrub: true,
@@ -31,9 +33,10 @@ export default function HeadingSection() {
         }, container);
         return () => ctx.revert();
     }, []);
-    return ( <header ref={container} className="App-header flex flex-col items-center pt-60 sm:pt-48" id="home">
+    
+    return ( <header ref={container} className="App-header flex flex-col items-center pt-60 md:pt-0 md:justify-center" id="home">
         <div className='px-8 sm:px-0'>
-          <h1 className='text-3xl sm:text-5xl md:text-5xl md:text-5xl font-Blackout leading-none'>
+          <h1 className='text-3xl sm:text-4xl md:text-5xl font-Blackout leading-none'>
             <p ref={moveRight}>Grow your</p>
             <p ref={moveLeft}>brand</p>
           </h1>

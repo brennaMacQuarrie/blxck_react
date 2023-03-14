@@ -12,7 +12,6 @@ export default function TextBlock({ textBlockOne, textBlockTwo}) {
     let ctx = gsap.context(() => {
       const blocks = gsap.utils.toArray('.block');
       blocks.forEach(block => {
-        console.log(block)
         gsap.from(block, { 
           y: 80,
           duration: 1,

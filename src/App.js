@@ -1,12 +1,14 @@
 import './App.css';
-import ImageSection from './components/_common/ImageSection';
-import NavBar from './components/NavBar'
+import { lazy } from 'react';
+import NavBar from './components/NavBar';
 import TextSection from './components/_common/TextSection';
 import Services from './components/Services';
 import TextBlock from './components/_common/TextBlock';
 import ContactForm from './components/ContactForm';
 import ContactSection from './components/ContactSection';
 import HeadingSection from './components/HeadingSection';
+import RocketShip from './components/RocketShip';
+const ImageSection = lazy(() => import('./components/_common/ImageSection'));
 
 function App() {
   return (
@@ -43,6 +45,7 @@ function App() {
       </TextSection>
       
       <ContactSection />
+      <RocketShip />
     </div>
   );
 }
