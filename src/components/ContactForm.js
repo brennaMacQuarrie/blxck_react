@@ -1,12 +1,17 @@
 import * as emailjs from 'emailjs-com';
-import { useRef } from "react"
+import { useRef } from 'react';
+import { MdClose } from 'react-icons/md'
 import Button from './_common/Button';
 import FormField from './_common/FormField';
 import InputField from './_common/InputField';
 
-export default function ContactForm() {
+export default function ContactForm({ close }) {
     const form = useRef()
 
+    const handleClose = () => {
+        console.log('close modal')
+        close()
+    }
     const supportOptions = [
         { id: "branding", text: "Building my brand" },
         { id: "strategy", text: "Improving my business strategy" },
@@ -38,32 +43,36 @@ export default function ContactForm() {
 
         e.target.reset()
     }
-    return (<div className='flex justify-center my-10'>
+    return (<div className='fixed z-50 top-0 right-0 h-screen w-screen bg-black/80 flex justify-center items-center'>
         <form 
             ref={form} 
             onSubmit={sendEmail}
-            className='flex flex-col items-center gap-5 font-Russo text-lg sm:text-xl w-full'
+            className='flex flex-col h-fit w-fit border-[1px] rounded border-blx-gold bg-black/30 font-Russo text-base sm:text-lg lg:text-xl'
         >
-        
-            <InputField name="name" label="My name is" />
-            <InputField name="email" label="My email is" />            
-            <InputField name="companyName" label="My company name is" />
-            <FormField>
-                <label htmlFor="subject">I want help with</label>
-                <select name="subject" id="subject" required className='text-base sm:text-lg text-blx-gold bg-black border-b border-white pl-1 focus:outline-none focus:bg-white/20'>
-                    <option value="" disabled defaultValue>select your support type</option>
-                    { supportOptions.map(option => <option key={option.id} value={option.id}>{option.text}</option>) }
-                </select>
-            </FormField>
-            <FormField>
-                <label htmlFor="budget">My project budget is</label>
-                <select name="budget" id="budget" required className='text-base sm:text-lg text-blx-gold bg-black border-b border-white pl-1 focus:outline-none focus:bg-white/20'>
-                    <option value="" disabled defaultValue>select your budget</option>
-                    { budgetOptions.map(option => <option className='text-blx-gold' key={option.id} value={option.id}>{option.text}</option>) }
-                </select>
-            </FormField>
-            
-            <Button type="submit" text={'Submit'} />
+            <button onClick={() => handleClose()} type="button" className='my-8 mr-8 self-end flex justify-center items-center bg-white/60 rounded-full text-black h-8 w-8'>
+                <MdClose />
+            </button>
+            <div className='h-full px-4 md:px-6 pb-8 md:pb-16 flex flex-col items-center gap-8 md:gap-3 md:gap-5 '>
+                <InputField name="name" label="My name is" />
+                <InputField name="email" label="My email is" />            
+                <InputField name="companyName" label="My company name is" />
+                <FormField>
+                    <label htmlFor="subject">I want help with</label>
+                    <select name="subject" id="subject" required className='text-base sm:text-lg text-blx-gold bg-black border-b border-white pl-1 focus:outline-none focus:bg-white/20'>
+                        <option value="" disabled defaultValue>select your support type</option>
+                        { supportOptions.map(option => <option key={option.id} value={option.id}>{option.text}</option>) }
+                    </select>
+                </FormField>
+                <FormField>
+                    <label htmlFor="budget">My project budget is</label>
+                    <select name="budget" id="budget" required className='text-base sm:text-lg text-blx-gold bg-black border-b border-white pl-1 focus:outline-none focus:bg-white/20'>
+                        <option value="" disabled defaultValue>Select your budget</option>
+                        { budgetOptions.map(option => <option className='text-blx-gold' key={option.id} value={option.id}>{option.text}</option>) }
+                    </select>
+                </FormField>
+                
+                <Button type="submit" text={'Submit'} />
+            </div>
         </form>
     </div>)
 }

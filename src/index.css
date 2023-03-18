@@ -30,6 +30,10 @@
   color: transparent;
   -webkit-text-stroke: 0.7px  #e7c376;
 }
+.blue-stroke {
+  color: transparent;
+  -webkit-text-stroke: 0.7px  #96eff9;
+}
 
 
 html {

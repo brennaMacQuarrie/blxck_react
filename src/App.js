@@ -1,14 +1,13 @@
-import './App.css';
 import { lazy, Suspense } from 'react';
-import NavBar from './components/NavBar';
-import TextSection from './components/_common/TextSection';
-import Services from './components/Services';
-import TextBlock from './components/_common/TextBlock';
-import ContactForm from './components/ContactForm';
+import './App.css';
 import ContactSection from './components/ContactSection';
 import HeadingSection from './components/HeadingSection';
+import NavBar from './components/NavBar';
 import RocketShip from './components/RocketShip';
+import Services from './components/Services';
 import Loader from './components/_common/Loader';
+import TextBlock from './components/_common/TextBlock';
+import TextSection from './components/_common/TextSection';
 // import ImageSection from './components/_common/ImageSection';
 const ImageSection = lazy(() => import('./components/_common/ImageSection'));
 
@@ -37,7 +36,7 @@ function App() {
       </TextSection>
 
       <Suspense fallback={<Loader />}>
-        <ImageSection image={'/epic-earth-rotate-sunlight-glow-starry-galaxy-2021-08-29-03-57-26-utc.jpg'} />
+        <ImageSection image={'/earth-planet-orbit-with-bright-sun-in-dark-outer-s-2021-08-29-17-31-53-utc.jpg'} />
       </Suspense>
 
       <TextSection title={'Our services'} direction={'right'}>
@@ -45,14 +44,13 @@ function App() {
       </TextSection>
 
       <Suspense fallback={<Loader />}>
-        <ImageSection image={'/solar-eclipse-by-a-lunar-event-with-ring-of-fire-2021-08-29-03-57-26-utc.jpg'} />
+        <ImageSection image={'/tyler-van-der-hoeven-_ok8uVzL2gI-unsplash.jpg'} />
       </Suspense>
 
-      <TextSection title={'Contact'} direction={'left'}>
-        <ContactForm />
-      </TextSection>
-      
       <ContactSection />
+        {/* <ContactForm /> */}
+      
+      
       <RocketShip />
     </div>
   );

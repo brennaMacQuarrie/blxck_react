@@ -25,7 +25,7 @@ export default function TextSection(props) {
     });
 
     return (
-        <div ref={container} className="h-fit w-full bg-black text-white h-fit py-16 text-center">
+        <div ref={container} className="min-h-[70vh] flex flex-col justify-center w-full bg-black text-white h-fit text-center">
             {props.title && <h3 ref={heading} className='text-3xl font-SpaceAge white-stroke font-bold'>
                 {props.title} <span className='yellow-stroke'>//</span>
             </h3>}

@@ -1,14 +1,12 @@
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import React, { useEffect, useRef, useState } from 'react'
-import { 
-    WiMoonAltFull, 
-    WiMoonAltWaxingCrescent1, 
-    WiMoonAltWaxingCrescent4, 
-    WiMoonAltWaxingGibbous1, 
-    WiMoonAltWaxingGibbous4, 
-    WiMoonAltNew } from 'react-icons/wi'
-import { GrClose } from 'react-icons/gr'
+import React, { useRef, useState } from 'react';
+import {
+    WiMoonAltFull, WiMoonAltNew, WiMoonAltWaxingCrescent1,
+    WiMoonAltWaxingCrescent4,
+    WiMoonAltWaxingGibbous1,
+    WiMoonAltWaxingGibbous4
+} from 'react-icons/wi';
 import MoonAnimation from './_common/MoonAnimation';
 
 const services = [
@@ -92,13 +90,10 @@ export default function Services() {
 
 
     return (
-         <div className='relative w-full overflow-hidden flex justify-center flex-wrap h-fit p-16 lg:p-4'>
-            <div ref={service} onClick={() => handleClose(activeItem.id)} className='z-[-1] opacity-0 invisible absolute top-0 left-0 w-full flex flex-col py-10 items-center text-xl font-Russo bg-black'>
+         <div className='relative mb-10 w-full overflow-hidden flex justify-center flex-wrap h-fit p-16 lg:p-4'>
+            <button ref={service} onClick={() => handleClose(activeItem.id)} className='z-[-1] opacity-0 invisible absolute top-0 left-0 w-full flex flex-col items-center pt-20 text-xl font-Russo bg-black'>
                 <div ref={text} className='opacity-0 invisible h-0'>
-                    <button onClick={() => handleOpen(activeItem.id)}>
-                        <MoonAnimation />
-                        {/* <GrClose className='rounded-full bg-white/40 hover:bg-white/100 p-3 transition-bg duration-500 h-6 w-6' /> */}
-                    </button>
+                    <MoonAnimation size="80px" isActive={true} />
                     <h3 className='text-3xl text-blx-blue font-SpaceAge'>
                         {activeItem.title}
                     </h3>
@@ -106,7 +101,7 @@ export default function Services() {
                         {activeItem.content}
                     </p>
                 </div>
-            </div>
+            </button>
             { services.map(service => {
                 return (
                     <ServiceBlock
@@ -130,9 +125,9 @@ function ServiceBlock({ id, title, Icon, handleOpen }) {
 
     return (
         <React.Fragment>
-            <button onClick={() => handlehandleOpen(id)} className='w-[350px] lg:w-[400px] h-[200px] lg:h-[200px] flex flex-col justify-center items-center gap-4 border-white/40 border-2 bg-black transition-bg duration-300 hover:bg-white/40 hover:border-transparent'>
+            <button onClick={() => handlehandleOpen(id)} className='group w-[350px] lg:w-[400px] h-[200px] lg:h-[200px] flex flex-col justify-center items-center gap-2 border-white/30 border-2 bg-black transition-bg duration-300 hover:bg-white/30 hover:border-transparent'>
                 <Icon className='min-h-[50px] min-w-[50px]' />
-                <h3 className="w-full text-base md:text-xl font-SpaceAge transition-scale duration-300 group-hover:scale-105 text-blx-blue group-hover:text-blx-gold">
+                <h3 className="w-full text-base md:text-xl font-SpaceAge transition-scale duration-300 group-hover:scale-105 blue-stroke group-hover:text-blx-blue">
                     {title}
                 </h3>
             </button>
