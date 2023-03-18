@@ -26,7 +26,7 @@ export default function TextBlock({ textBlockOne, textBlockTwo}) {
   }, []);
 
   return (
-        <div ref={container} className='w-full text-xl font-Russo uppercase px-20 py-10'>
+        <div ref={container} className='w-full flex flex-col gap-5 text-lg lg:text-xl font-Russo uppercase px-40 py-10'>
           { textBlockOne && 
             <p className='block text-gray-400'>{ textBlockOne }</p> }
           { textBlockTwo && 

@@ -25,15 +25,32 @@ export default function VerticalNavBar() {
     });
 
     const toggleMenu = () => {
-        setIsOpen(isOpen => !isOpen)
-        gsap.to(menu.current, { 
+        setIsOpen(isOpen => !isOpen);
+
+        const tl = gsap.timeline();
+        tl.to(container.current, { 
             height: isOpen ? 0 : 280,
-        });
+            duration: 1
+        })
+        .to(container.current, {
+            y: isOpen ? 8 : 18,
+        }, '-=0.5')
+        .to(menu.current, {
+            paddingTop: isOpen ? 0 : 24,
+            paddingBottom: isOpen ? 0 : 24,
+            duration: 0.2
+        }, '-=0.6')
+        .to('a > *', {
+            height: isOpen ? 0 : 24,
+            width: isOpen ? 0 : 24,
+            duration: 0.2,
+            stagger: 0.06,
+        }, `${isOpen ? '-=1' : '-=0.1'}`)
     };
 
     return (
         <div className='fixed top-5 right-16 cursor-pointer rounded-full focus:outline-none focus-visible:bg-white/40'>
-            <button ref={container} className='block' onClick={toggleMenu}>
+            <button className='block rounded-full' onClick={toggleMenu}>
                 <img 
                     ref={circle}
                     src={require('../images/blxck_round_logo.png')}  
@@ -41,16 +58,16 @@ export default function VerticalNavBar() {
                     className='h-10 w-10'
                 />
             </button>
-            <div ref={menu} className={`${isOpen ? 'top-16 transition-top duration-75' : 'top-8'} z-90 absolute right-0 w-10 h-0`}>
+            <div ref={container} className={`z-50 absolute right-0 w-10 h-0`}>
                 <div className="h-full w-full flex flex-col items-center gap-6">
-                    <div className='h-full w-full bg-white/10 rounded-md flex flex-col gap-10 justify-center items-center'>
+                    <div ref={menu} className='h-full w-full bg-white/10 rounded-md flex flex-col justify-around gap-4 items-center overflow-hidden'>
                         <a 
                             aria-label='click to initiate a phone call' 
                             target='_blank' 
                             rel='noopener noreferrer' 
                             href="tel:780-722-0646" 
                         >
-                            <BsTelephone className={`${isOpen ? 'h-6 w-6' : 'h-0'} transition-height duration-500 text-white/60 hover:text-white focus:text-white`}/>
+                            <BsTelephone className={`h-0 text-white/60 hover:text-white focus:text-white`}/>
                         </a>
                         <a
                             aria-label='click to send us an email' 
@@ -58,7 +75,7 @@ export default function VerticalNavBar() {
                             rel='noopener noreferrer' 
                             href="mailto:blxckmarketing@gmail.com" 
                         >
-                            <MdEmail className={`${isOpen ? 'h-6 w-6' : 'h-0'} transition-height duration-500 text-white/60 hover:text-white focus:text-white`}/>
+                            <MdEmail className={`h-0 text-white/60 hover:text-white focus:text-white`}/>
                         </a>
                         <a
                             aria-label='click to open our location on google maps' 
@@ -66,7 +83,7 @@ export default function VerticalNavBar() {
                             rel='noopener noreferrer' 
                             href='https://www.google.com/maps/place/BLXCK+marketing/@53.5529256,-113.5247396,15z/data=!4m2!3m1!1s0x0:0x1186dd76a63a1c34?sa=X&ved=2ahUKEwj0p4n54dT9AhUnIjQIHex-BcQQ_BJ6BAhgEAg'
                         >
-                            <SiGooglemaps className={`${isOpen ? 'h-6 w-6' : 'h-0'} transition-height duration-500 text-white/60 hover:text-white focus:text-white`}/>
+                            <SiGooglemaps className={`h-0 text-white/60 hover:text-white focus:text-white`}/>
                         </a>
                     </div>
                     <img 

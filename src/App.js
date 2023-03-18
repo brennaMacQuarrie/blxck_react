@@ -1,5 +1,5 @@
 import './App.css';
-import { lazy } from 'react';
+import { lazy, Suspense } from 'react';
 import NavBar from './components/NavBar';
 import TextSection from './components/_common/TextSection';
 import Services from './components/Services';
@@ -8,6 +8,8 @@ import ContactForm from './components/ContactForm';
 import ContactSection from './components/ContactSection';
 import HeadingSection from './components/HeadingSection';
 import RocketShip from './components/RocketShip';
+import Loader from './components/_common/Loader';
+// import ImageSection from './components/_common/ImageSection';
 const ImageSection = lazy(() => import('./components/_common/ImageSection'));
 
 function App() {
@@ -23,7 +25,9 @@ function App() {
         />
       </TextSection>
 
-      <ImageSection image={'/greg-rakozy-oMpAz-DN-9I-unsplash.jpg'} />
+      <Suspense fallback={<Loader />}>
+        <ImageSection image={'/greg-rakozy-oMpAz-DN-9I-unsplash.jpg'} />
+      </Suspense>
 
       <TextSection title={'What we do'} direction={'left'}>
         <TextBlock 
@@ -32,13 +36,17 @@ function App() {
         />
       </TextSection>
 
-      <ImageSection image={'/epic-earth-rotate-sunlight-glow-starry-galaxy-2021-08-29-03-57-26-utc.jpg'} />
+      <Suspense fallback={<Loader />}>
+        <ImageSection image={'/epic-earth-rotate-sunlight-glow-starry-galaxy-2021-08-29-03-57-26-utc.jpg'} />
+      </Suspense>
 
       <TextSection title={'Our services'} direction={'right'}>
         <Services />
       </TextSection>
 
-      <ImageSection image={'/solar-eclipse-by-a-lunar-event-with-ring-of-fire-2021-08-29-03-57-26-utc.jpg'} />
+      <Suspense fallback={<Loader />}>
+        <ImageSection image={'/solar-eclipse-by-a-lunar-event-with-ring-of-fire-2021-08-29-03-57-26-utc.jpg'} />
+      </Suspense>
 
       <TextSection title={'Contact'} direction={'left'}>
         <ContactForm />
