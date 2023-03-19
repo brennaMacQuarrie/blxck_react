@@ -17,7 +17,7 @@ export default function ContactSection() {
         let ctx = gsap.context(() => {
             tl.current.to(container.current, { 
                 autoAlpha: 1,
-                zIndex: 4,
+                zIndex: 999,
                 opacity: 1,
                 duration: 0.8
             })
