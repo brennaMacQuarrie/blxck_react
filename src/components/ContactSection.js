@@ -40,9 +40,9 @@ export default function ContactSection() {
 
     return (
     <TextSection title={'Contact'} direction={'left'}>
-        <div className='ContactSection h-screen min-h-[70vh] flex flex-col pt-16 gap-10 sm:gap-32 items-center'>
+        <div className='ContactSection h-screen min-h-fit flex flex-col pt-16 gap-10 sm:gap-32 items-center'>
           <CircleButton triggerEvent={toggleModal} />
-          <div className='flex flex-col sm:flex-row gap-6 sm:gap-20 justify-between items-center sm:items-start'>
+          <div className='flex flex-col sm:flex-row gap-6 sm:gap-20 justify-between items-center sm:items-start pb-40'>
             <div className='flex flex-col items-center gap-2'>
               <a 
                   target='_blank' 

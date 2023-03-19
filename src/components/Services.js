@@ -90,7 +90,7 @@ export default function Services() {
 
 
     return (
-         <div className='relative mb-10 w-full min-h-[45vh] overflow-hidden grid grid-cols-2 lg:grid-cols-3 p-0 sm:p-4'>
+         <div className='relative my-10 w-full min-h-[45vh] overflow-hidden grid grid-cols-2 lg:grid-cols-3 p-0 sm:p-4'>
             <button ref={service} onClick={() => handleClose(activeItem.id)} className='z-[-1] opacity-0 invisible absolute top-0 left-0 w-full h-full scale-0 flex flex-col items-center pt-10 text-xl font-Russo bg-black'>
                 <div ref={text} className='opacity-0 invisible h-0'>
                     <MoonAnimation size="80px" isActive={true} />
@@ -125,7 +125,7 @@ function ServiceBlock({ id, title, Icon, handleOpen }) {
 
     return (
         <React.Fragment>
-            <button onClick={() => handlehandleOpen(id)} className='group h-full py-8 md:py-10 flex flex-col justify-center items-center gap-2 border-white/30 border-2 bg-black transition-bg duration-300 hover:bg-white/30 hover:border-transparent'>
+            <button onClick={() => handlehandleOpen(id)} className='group h-full py-8 md:py-10 flex flex-col justify-center items-center gap-2 border-white/30 border-[1px] sm:border-2 bg-black transition-bg duration-300 hover:bg-white/30 hover:border-transparent'>
                 <Icon className='min-h-[50px] min-w-[50px]' />
                 <h3 className="w-full text-base sm:text-lg md:text-xl font-SpaceAge transition-scale duration-300 group-hover:scale-105 text-blx-blue sm:blue-stroke group-hover:text-blx-blue">
                     {title}
