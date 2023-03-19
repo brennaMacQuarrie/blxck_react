@@ -44,7 +44,7 @@ function App() {
       </TextSection>
 
       <Suspense fallback={<Loader />}>
-        <ImageSection image={'/tyler-van-der-hoeven-_ok8uVzL2gI-unsplash.jpg'} />
+        <ImageSection image={'./tyler-van-der-hoeven-_ok8uVzL2gI-unsplash.jpg'} />
       </Suspense>
 
       <ContactSection />      
