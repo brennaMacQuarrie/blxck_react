@@ -36,7 +36,7 @@ function App() {
       </TextSection>
 
       <Suspense fallback={<Loader />}>
-        <ImageSection image={'./earth-planet-orbit-with-bright-sun-in-dark-outer-s-2021-08-29-17-31-53-utc.jpg'} />
+        <ImageSection image={'./nasa-Q1p7bh3SHj8-unsplash.jpg'} />
       </Suspense>
 
       <TextSection title={'Our services'} direction={'right'}>
@@ -44,7 +44,7 @@ function App() {
       </TextSection>
 
       <Suspense fallback={<Loader />}>
-        <ImageSection image={'./tyler-van-der-hoeven-_ok8uVzL2gI-unsplash.jpg'} />
+        <ImageSection image={'./space-illustration-with-moon-and-planet-in-space-2021-08-26-17-37-33-utc.jpg'} />
       </Suspense>
 
       <ContactSection />      

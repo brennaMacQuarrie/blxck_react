@@ -31,14 +31,14 @@ export default function CircleButton({ triggerEvent }) {
     }, []);
 
     return (
-        <button onClick={() => handleClick()} ref={container} className='font-Russo text-lg flex items-center gap-2 border-[1px] border-white/20 rounded-full'>
+        <button onClick={() => handleClick()} ref={container} className='font-SpaceAge text-base sm:text-lg flex items-center gap-2 border-[1px] border-white/20 rounded-full bg-white/20 hover:bg-white/40 transition-bg duration-300'>
             <img 
                 ref={circleLeft}
                 src={require('../../images/blxck_round_logo.png')}  
                 alt='click to open our contact form' 
                 className="Circle h-8 w-8"
             />
-            Click here
+            click here
             <img 
                 ref={circleRight}
                 src={require('../../images/blxck_round_logo.png')}  
