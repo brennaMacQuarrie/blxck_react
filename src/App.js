@@ -25,7 +25,7 @@ function App() {
       </TextSection>
 
       <Suspense fallback={<Loader />}>
-        <ImageSection image={'./greg-rakozy-oMpAz-DN-9I-unsplash.jpg'} />
+        <ImageSection image={'/greg-rakozy-oMpAz-DN-9I-unsplash.jpg'} />
       </Suspense>
 
       <TextSection title={'What we do'} direction={'left'}>
@@ -36,7 +36,7 @@ function App() {
       </TextSection>
 
       <Suspense fallback={<Loader />}>
-        <ImageSection image={'./earth-planet-orbit-with-bright-sun-in-dark-outer-s-2021-08-29-17-31-53-utc.jpg'} />
+        <ImageSection image={'/earth-planet-orbit-with-bright-sun-in-dark-outer-s-2021-08-29-17-31-53-utc.jpg'} />
       </Suspense>
 
       <TextSection title={'Our services'} direction={'right'}>
@@ -44,7 +44,7 @@ function App() {
       </TextSection>
 
       <Suspense fallback={<Loader />}>
-        <ImageSection image={'./tyler-van-der-hoeven-_ok8uVzL2gI-unsplash.jpg'} />
+        <ImageSection image={'/tyler-van-der-hoeven-_ok8uVzL2gI-unsplash.jpg'} />
       </Suspense>
 
       <ContactSection />      
