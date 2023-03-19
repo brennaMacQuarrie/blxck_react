@@ -35,8 +35,8 @@ export default function HeadingSection() {
     }, []);
     
     return ( <header ref={container} className="App-header flex flex-col items-center pt-60 md:pt-0 md:justify-center" id="home">
-        <div className='px-8 sm:px-0'>
-          <h1 className='text-3xl sm:text-4xl md:text-5xl font-Blackout leading-none'>
+        <div className='px-12 sm:px-4'>
+          <h1 className='text-4xl md:text-5xl font-Blackout leading-none'>
             <p ref={moveRight}>Grow your</p>
             <p ref={moveLeft}>brand</p>
           </h1>

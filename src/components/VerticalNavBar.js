@@ -43,7 +43,7 @@ export default function VerticalNavBar() {
     };
 
     return (
-        <div className='fixed top-5 right-16 cursor-pointer rounded-full focus:outline-none focus-visible:bg-white/40'>
+        <div className='fixed top-2 md:top-5 right-5 md:right-16 cursor-pointer rounded-full focus:outline-none focus-visible:bg-white/40'>
             <button className='block rounded-full' onClick={toggleMenu}>
                 <img 
                     src={require('../images/blxck_round_logo.png')}  

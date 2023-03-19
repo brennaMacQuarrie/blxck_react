@@ -1,15 +1,14 @@
 import * as emailjs from 'emailjs-com';
-import { useRef } from 'react';
-import { MdClose } from 'react-icons/md'
+import { forwardRef, useRef } from 'react';
+import { MdClose } from 'react-icons/md';
 import Button from './_common/Button';
 import FormField from './_common/FormField';
 import InputField from './_common/InputField';
 
-export default function ContactForm({ close }) {
-    const form = useRef()
+const ContactModal = forwardRef(function ContactModal({ close }, ref) {
+    const form = useRef();
 
     const handleClose = () => {
-        console.log('close modal')
         close()
     }
     const supportOptions = [
@@ -43,13 +42,12 @@ export default function ContactForm({ close }) {
 
         e.target.reset()
     }
-    return (<div className='fixed z-50 top-0 right-0 h-screen w-screen bg-black/80 flex justify-center items-center'>
+    return (<div ref={ref} className='z-[-1] opacity-0 w-screen h-screen overflow-hidden fixed top-0 right-0 bg-black/80 flex justify-center items-center'>
         <form 
-            ref={form} 
             onSubmit={sendEmail}
-            className='flex flex-col h-fit w-fit border-[1px] rounded border-blx-gold bg-black/30 font-Russo text-base sm:text-lg lg:text-xl'
+            className='Form scale-0 flex flex-col h-fit w-fit border-[1px] rounded border-blx-gold bg-black/30 font-Russo text-base sm:text-lg lg:text-xl'
         >
-            <button onClick={() => handleClose()} type="button" className='my-8 mr-8 self-end flex justify-center items-center bg-white/60 rounded-full text-black h-8 w-8'>
+            <button onClick={() => handleClose()} type="button" className='my-8 mr-8 self-end flex justify-center items-center bg-white/60 rounded-full text-black h-8 w-8 hover:bg-white/100 transition-bg duration-500'>
                 <MdClose />
             </button>
             <div className='h-full px-4 md:px-6 pb-8 md:pb-16 flex flex-col items-center gap-8 md:gap-3 md:gap-5 '>
@@ -75,4 +73,6 @@ export default function ContactForm({ close }) {
             </div>
         </form>
     </div>)
-}
+})
+
+export default ContactModal

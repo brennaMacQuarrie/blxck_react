@@ -15,7 +15,7 @@ export default function RocketShip() {
         });
     }
     return (
-        <div className='fixed bottom-4 left-4'>
+        <div className='fixed bottom-4 left-4 z-50'>
             <button className='block flex justify-center items-center rounded-full focus:outline-none focus:bg-white/40' onClick={sendRocket}>
                 <img 
                     src={require('../images/blxck_round_logo.png')}  

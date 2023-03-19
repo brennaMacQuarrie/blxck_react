@@ -26,12 +26,12 @@ module.exports = {
     },
     fontSize: {
       sm: '0.8rem',
-      base: '1rem',
+      base: '1.2rem',
       'lg': '1.5rem',
       xl: '2rem',
       '2xl': '2.8rem',
       '3xl': '3.8rem',
-      '4xl': '6rem',
+      '4xl': '8rem',
       '5xl': '10rem',
     },
     
