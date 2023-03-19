@@ -10,8 +10,8 @@ export default function TextSection(props) {
 
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
-            gsap.from(heading.current, {
-                x: props.direction === 'right' ? -500 : 500,
+            gsap.to(heading.current, {
+                x: 0,
                 duration: 6, 
                 scrollTrigger: {
                     trigger: container.current,
@@ -25,8 +25,8 @@ export default function TextSection(props) {
     });
 
     return (
-        <div ref={container} className="min-h-[70vh] flex flex-col justify-center w-full bg-black text-white h-fit text-center">
-            {props.title && <h3 ref={heading} className='text-2xl md:text-3xl font-SpaceAge white-stroke font-bold'>
+        <div ref={container} className="min-h-[70vh] h-fit flex flex-col justify-center w-full bg-black text-white h-fit text-center">
+            {props.title && <h3 ref={heading} className={`${props.direction === 'left' ? 'translate-x-[-400px]' : 'translate-x-[300px]'} relative text-2xl md:text-3xl font-SpaceAge white-stroke font-bold`}>
                 {props.title} <span className='yellow-stroke'>//</span>
             </h3>}
             <div className='w-full'>

@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/blxck_react/static/css/main.501df501.css",
-    "main.js": "/blxck_react/static/js/main.8f2206ac.js",
-    "static/js/48.d3cbec4f.chunk.js": "/blxck_react/static/js/48.d3cbec4f.chunk.js",
-    "static/js/787.00ff0482.chunk.js": "/blxck_react/static/js/787.00ff0482.chunk.js",
-    "static/media/thing3.jpg": "/blxck_react/static/media/thing3.6cdf2408f53297936a10.jpg",
-    "static/media/blxck_round_logo.png": "/blxck_react/static/media/blxck_round_logo.da49921e0a2ad79d56ea.png",
-    "static/media/earth4.png": "/blxck_react/static/media/earth4.8bafaa4fea3b8901cb27.png",
-    "static/media/arial_narrow.ttf": "/blxck_react/static/media/arial_narrow.1602b169620f16b4ee67.ttf",
-    "static/media/RussoOne-Regular.ttf": "/blxck_react/static/media/RussoOne-Regular.eeee49799c79e2929b29.ttf",
-    "static/media/space-age.ttf": "/blxck_react/static/media/space-age.1ad6f4f0cb975b88b5b9.ttf",
-    "static/media/BlackoutSunrise.ttf": "/blxck_react/static/media/BlackoutSunrise.9e224ff6d2b3e56c650b.ttf",
-    "index.html": "/blxck_react/index.html",
-    "main.501df501.css.map": "/blxck_react/static/css/main.501df501.css.map",
-    "main.8f2206ac.js.map": "/blxck_react/static/js/main.8f2206ac.js.map",
-    "48.d3cbec4f.chunk.js.map": "/blxck_react/static/js/48.d3cbec4f.chunk.js.map",
-    "787.00ff0482.chunk.js.map": "/blxck_react/static/js/787.00ff0482.chunk.js.map"
+    "main.css": "./static/css/main.ec35bfd8.css",
+    "main.js": "./static/js/main.c7fa3cf5.js",
+    "static/js/48.d3cbec4f.chunk.js": "./static/js/48.d3cbec4f.chunk.js",
+    "static/js/787.00ff0482.chunk.js": "./static/js/787.00ff0482.chunk.js",
+    "static/media/thing3.jpg": "./static/media/thing3.6cdf2408f53297936a10.jpg",
+    "static/media/blxck_round_logo.png": "./static/media/blxck_round_logo.da49921e0a2ad79d56ea.png",
+    "static/media/earth4.png": "./static/media/earth4.8bafaa4fea3b8901cb27.png",
+    "static/media/arial_narrow.ttf": "./static/media/arial_narrow.1602b169620f16b4ee67.ttf",
+    "static/media/RussoOne-Regular.ttf": "./static/media/RussoOne-Regular.eeee49799c79e2929b29.ttf",
+    "static/media/space-age.ttf": "./static/media/space-age.1ad6f4f0cb975b88b5b9.ttf",
+    "static/media/BlackoutSunrise.ttf": "./static/media/BlackoutSunrise.9e224ff6d2b3e56c650b.ttf",
+    "index.html": "./index.html",
+    "main.ec35bfd8.css.map": "./static/css/main.ec35bfd8.css.map",
+    "main.c7fa3cf5.js.map": "./static/js/main.c7fa3cf5.js.map",
+    "48.d3cbec4f.chunk.js.map": "./static/js/48.d3cbec4f.chunk.js.map",
+    "787.00ff0482.chunk.js.map": "./static/js/787.00ff0482.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.501df501.css",
-    "static/js/main.8f2206ac.js"
+    "static/css/main.ec35bfd8.css",
+    "static/js/main.c7fa3cf5.js"
   ]
 }
