@@ -47,9 +47,7 @@ function App() {
         <ImageSection image={'./tyler-van-der-hoeven-_ok8uVzL2gI-unsplash.jpg'} />
       </Suspense>
 
-      <ContactSection />
-        {/* <ContactForm /> */}
-      
+      <ContactSection />      
       
       <RocketShip />
     </div>
