@@ -42,7 +42,7 @@ const ContactModal = forwardRef(function ContactModal({ close }, ref) {
 
         e.target.reset()
     }
-    return (<div ref={ref} className='z-[-1] opacity-0 w-screen h-screen overflow-hidden fixed top-0 right-0 bg-black sm:bg-black/80 flex justify-center items-center'>
+    return (<div ref={ref} className='z-[-1] opacity-0 w-screen h-screen overflow-hidden fixed top-0 right-0 bg-black sm:bg-black/80 flex justify-center pt-10 sm:items-center'>
         <form 
             onSubmit={sendEmail}
             className='Form scale-0 flex flex-col h-fit w-fit border-[1px] rounded border-blx-gold bg-black sm:bg-black/30 font-Russo text-base sm:text-lg lg:text-xl'

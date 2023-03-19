@@ -57,41 +57,41 @@ export default function Services() {
     const text = useRef();
 
     const tl = gsap.timeline();
-   
 
     const handleOpen = (id) => {
         setActiveItem(services.find(item => item.id === id));
         tl.to(service.current, {
             zIndex: 2,
+            autoAlpha: 1,
         })
         .to(service.current, {
-            height: '100%',
-            autoAlpha: 1,
-            duration: 0.6,
+            scale: 1,
+            transformOrigin: '50% 20%',
+            duration: 0.8,
         })
         .to(text.current, {
             autoAlpha: 1,
-            height: 200,
-            duration: 0.6
+            scale: 1,
+            duration: 0.8
         });
     }
 
     const handleClose = () => {
         setActiveItem({})
         tl.to(service.current, {
-            height: 0,
+            scale: 0,
             autoAlpha: 0,
             duration: 0.5,
         })
         .to(service.current, {
             zIndex: -1,
-        }, '-=0.3')
+        })
     }
 
 
     return (
          <div className='relative mb-10 w-full min-h-[45vh] overflow-hidden grid grid-cols-2 lg:grid-cols-3 p-0 sm:p-4'>
-            <button ref={service} onClick={() => handleClose(activeItem.id)} className='z-[-1] opacity-0 invisible absolute top-0 left-0 w-full flex flex-col items-center pt-20 text-xl font-Russo bg-black'>
+            <button ref={service} onClick={() => handleClose(activeItem.id)} className='z-[-1] opacity-0 invisible absolute top-0 left-0 w-full h-full scale-0 flex flex-col items-center pt-10 text-xl font-Russo bg-black'>
                 <div ref={text} className='opacity-0 invisible h-0'>
                     <MoonAnimation size="80px" isActive={true} />
                     <h3 className='text-xl md:text-3xl mb-4 text-blx-blue font-SpaceAge'>

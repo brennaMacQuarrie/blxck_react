@@ -5,7 +5,6 @@ export default function CircleButton({ triggerEvent }) {
     const container = useRef();
     const circleLeft = useRef();
     const circleRight = useRef();
-    // const tl = useRef(gsap.timeline({ repeat: -1 }));
 
     const handleClick = () => {
         triggerEvent()
@@ -32,19 +31,19 @@ export default function CircleButton({ triggerEvent }) {
     }, []);
 
     return (
-        <button onClick={() => handleClick()} ref={container} className='font-Russo text-lg flex items-center gap-2'>
+        <button onClick={() => handleClick()} ref={container} className='font-Russo text-lg flex items-center gap-2 border-[1px] border-white/20 rounded-full'>
             <img 
                 ref={circleLeft}
                 src={require('../../images/blxck_round_logo.png')}  
                 alt='click to open our contact form' 
-                className="Circle h-14 w-14"
+                className="Circle h-8 w-8"
             />
             Click here
             <img 
                 ref={circleRight}
                 src={require('../../images/blxck_round_logo.png')}  
                 alt='click to open our contact form' 
-                className="Circle h-14 w-14"
+                className="Circle h-8 w-8"
             />
         </button>
     )

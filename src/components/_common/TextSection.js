@@ -26,7 +26,7 @@ export default function TextSection(props) {
 
     return (
         <div ref={container} className="min-h-[70vh] h-fit flex flex-col justify-center w-full bg-black text-white h-fit text-center">
-            {props.title && <h3 ref={heading} className={`${props.direction === 'left' ? 'translate-x-[-400px]' : 'translate-x-[300px]'} relative text-2xl md:text-3xl font-SpaceAge white-stroke font-bold`}>
+            {props.title && <h3 ref={heading} className={`${props.direction === 'left' ? 'translate-x-[100px] sm:translate-x-[-600px]' : 'translate-x-[100px] sm:translate-x-[600px]'} relative text-2xl md:text-3xl font-SpaceAge white-stroke font-bold`}>
                 {props.title} <span className='yellow-stroke'>//</span>
             </h3>}
             <div className='w-full'>
