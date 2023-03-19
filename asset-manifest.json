@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/blxck_react/static/css/main.36e38805.css",
-    "main.js": "/blxck_react/static/js/main.b5068c65.js",
+    "main.css": "/blxck_react/static/css/main.501df501.css",
+    "main.js": "/blxck_react/static/js/main.8f2206ac.js",
     "static/js/48.d3cbec4f.chunk.js": "/blxck_react/static/js/48.d3cbec4f.chunk.js",
     "static/js/787.00ff0482.chunk.js": "/blxck_react/static/js/787.00ff0482.chunk.js",
     "static/media/thing3.jpg": "/blxck_react/static/media/thing3.6cdf2408f53297936a10.jpg",
@@ -12,13 +12,13 @@
     "static/media/space-age.ttf": "/blxck_react/static/media/space-age.1ad6f4f0cb975b88b5b9.ttf",
     "static/media/BlackoutSunrise.ttf": "/blxck_react/static/media/BlackoutSunrise.9e224ff6d2b3e56c650b.ttf",
     "index.html": "/blxck_react/index.html",
-    "main.36e38805.css.map": "/blxck_react/static/css/main.36e38805.css.map",
-    "main.b5068c65.js.map": "/blxck_react/static/js/main.b5068c65.js.map",
+    "main.501df501.css.map": "/blxck_react/static/css/main.501df501.css.map",
+    "main.8f2206ac.js.map": "/blxck_react/static/js/main.8f2206ac.js.map",
     "48.d3cbec4f.chunk.js.map": "/blxck_react/static/js/48.d3cbec4f.chunk.js.map",
     "787.00ff0482.chunk.js.map": "/blxck_react/static/js/787.00ff0482.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.36e38805.css",
-    "static/js/main.b5068c65.js"
+    "static/css/main.501df501.css",
+    "static/js/main.8f2206ac.js"
   ]
 }
