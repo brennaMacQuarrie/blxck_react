@@ -50,7 +50,7 @@ const ContactModal = forwardRef(function ContactModal({ close }, ref) {
             <button onClick={() => handleClose()} type="button" className='mt-4 sm:mt-8 mr-4 sm:mr-8 self-end flex justify-center items-center bg-white/60 rounded-full text-black h-8 w-8 hover:bg-white/100 transition-bg duration-500'>
                 <MdClose />
             </button>
-            <div className='h-full px-8 sm:px-0 pb-8 sm:pb-0 flex flex-col items-center gap-4 md:gap-3 md:gap-5 '>
+            <div className='h-full px-8 sm:px-20 pb-8 sm:pb-12 flex flex-col items-center gap-4 md:gap-3 md:gap-5 '>
                 <InputField name="name" label="My name is" />
                 <InputField name="email" label="My email is" />            
                 <InputField name="companyName" label="My company name is" />
