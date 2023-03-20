@@ -101,7 +101,7 @@ export default function Services() {
                     <h3 className='text-xl md:text-3xl mb-4 text-blx-blue font-SpaceAge'>
                         {activeItem.title}
                     </h3>
-                    <p className='text-base sm:text-lg lg:text-xl px-16'>
+                    <p className='text-base sm:text-lg lg:text-xl px-32'>
                         {activeItem.content}
                     </p>
                 </div>
