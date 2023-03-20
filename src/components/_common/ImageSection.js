@@ -8,7 +8,7 @@ export default function ImageSection(props) {
                 backgroundPosition: 'center center',
             }}
         >
-            <div class="absolute z-50 bg-gradient-to-b from-transparent via-transparent via-transparent to-black h-full w-full" />
+            <div className="absolute z-50 bg-gradient-to-b from-transparent via-transparent via-transparent to-black h-full w-full" />
         </div>
     );
   }
