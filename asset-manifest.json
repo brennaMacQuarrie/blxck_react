@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "./static/css/main.69ba2628.css",
-    "main.js": "./static/js/main.fce959e2.js",
-    "static/js/48.425a8ef3.chunk.js": "./static/js/48.425a8ef3.chunk.js",
+    "main.css": "./static/css/main.40b22e50.css",
+    "main.js": "./static/js/main.1a364c34.js",
+    "static/js/48.f5c7d5e6.chunk.js": "./static/js/48.f5c7d5e6.chunk.js",
     "static/js/787.00ff0482.chunk.js": "./static/js/787.00ff0482.chunk.js",
     "static/media/thing3.jpg": "./static/media/thing3.6cdf2408f53297936a10.jpg",
     "static/media/blxck_round_logo.png": "./static/media/blxck_round_logo.da49921e0a2ad79d56ea.png",
@@ -12,13 +12,13 @@
     "static/media/space-age.ttf": "./static/media/space-age.1ad6f4f0cb975b88b5b9.ttf",
     "static/media/BlackoutSunrise.ttf": "./static/media/BlackoutSunrise.9e224ff6d2b3e56c650b.ttf",
     "index.html": "./index.html",
-    "main.69ba2628.css.map": "./static/css/main.69ba2628.css.map",
-    "main.fce959e2.js.map": "./static/js/main.fce959e2.js.map",
-    "48.425a8ef3.chunk.js.map": "./static/js/48.425a8ef3.chunk.js.map",
+    "main.40b22e50.css.map": "./static/css/main.40b22e50.css.map",
+    "main.1a364c34.js.map": "./static/js/main.1a364c34.js.map",
+    "48.f5c7d5e6.chunk.js.map": "./static/js/48.f5c7d5e6.chunk.js.map",
     "787.00ff0482.chunk.js.map": "./static/js/787.00ff0482.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.69ba2628.css",
-    "static/js/main.fce959e2.js"
+    "static/css/main.40b22e50.css",
+    "static/js/main.1a364c34.js"
   ]
 }
