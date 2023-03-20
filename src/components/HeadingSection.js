@@ -40,7 +40,6 @@ export default function HeadingSection() {
             <p ref={moveRight}>Grow your</p>
             <p ref={moveLeft}>brand</p>
           </h1>
-          {/* <h2 className="text-xl md:text-2xl font-Russo tracking-wider">Digital Strategy <span className='white-stroke font-bold'>//</span> Marketing</h2> */}
         </div>
       </header>
     )

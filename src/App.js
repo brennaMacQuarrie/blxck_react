@@ -1,21 +1,22 @@
 import { lazy, Suspense } from 'react';
 import './App.css';
 import ContactSection from './components/ContactSection';
-import HeadingSection from './components/HeadingSection';
 import NavBar from './components/NavBar';
 import RocketShip from './components/RocketShip';
 import Services from './components/Services';
 import Loader from './components/_common/Loader';
 import TextBlock from './components/_common/TextBlock';
 import TextSection from './components/_common/TextSection';
-// import ImageSection from './components/_common/ImageSection';
 const ImageSection = lazy(() => import('./components/_common/ImageSection'));
+const HeadingSection = lazy(() => import('./components/HeadingSection'));
 
 function App() {
   return (
     <div className="App overflow-hidden">
       <NavBar />
-      <HeadingSection />
+      <Suspense fallback={<Loader />}>
+        <HeadingSection />
+      </Suspense>
 
       <TextSection title={'About us'} direction={'right'}>
         <TextBlock 
