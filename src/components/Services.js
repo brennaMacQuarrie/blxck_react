@@ -73,7 +73,7 @@ export default function Services() {
             autoAlpha: 1,
             scale: 1,
             duration: 0.8
-        });
+        }, '-=0.6');
     }
 
     const handleClose = () => {
@@ -81,7 +81,7 @@ export default function Services() {
         tl.to(service.current, {
             scale: 0,
             autoAlpha: 0,
-            duration: 0.5,
+            duration: 0.6,
         })
         .to(service.current, {
             zIndex: -1,
@@ -101,7 +101,7 @@ export default function Services() {
                     <h3 className='text-xl md:text-3xl mb-4 text-blx-blue font-SpaceAge'>
                         {activeItem.title}
                     </h3>
-                    <p className='text-base sm:text-lg lg:text-xl px-32'>
+                    <p className='text-base sm:text-lg lg:text-xl px-8 md:px-32'>
                         {activeItem.content}
                     </p>
                 </div>
