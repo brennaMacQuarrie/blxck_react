@@ -1,5 +1,5 @@
 export default function Button(props) {
-    return (<button className='border-[1px] border-blx-gold text-blx-gold rounded w-40 text-base sm:text-lg transition-all duration-75 hover:text-white hover:border-white hover:translate-y-px'>
+    return (<button className='text-blx-gold rounded px-8 py-1 text-base sm:text-lg bg-black hover:bg-blx-gold hover:bg-opacity-70 hover:text-white transition-all duration-500'>
         {props.text}
     </button>)
 }

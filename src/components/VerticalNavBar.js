@@ -8,17 +8,23 @@ export default function VerticalNavBar() {
     const [isOpen, setIsOpen] = useState(false);
 
     const container = useRef();
+    const menuContainer = useRef();
+    const circle1 = useRef();
+    const circle2 = useRef();
     const menu = useRef();
     const tl = useRef(gsap.timeline({ paused: true }));
 
-
     useEffect(() => {
+        const circles = [
+            circle1.current,
+            circle2.current,
+          ];
         let ctx = gsap.context(() => {
-            tl.current.to(container.current, { 
+            tl.current.to(menuContainer.current, { 
                 height: 280,
                 duration: 1
             })
-            .to(container.current, {
+            .to(menuContainer.current, {
                 y: 16,
             }, '-=0.5')
             .to(menu.current, {
@@ -32,6 +38,14 @@ export default function VerticalNavBar() {
                 duration: 0.2,
                 stagger: 0.06,
             }, '-=0.1')
+
+            gsap.to(circles, { 
+                rotation: 360,
+                scale: 1.02,
+                duration: 3,
+                repeat: -1,
+                ease: "linear",
+            })
         }, container);
         
         return () => ctx.revert();
@@ -43,15 +57,16 @@ export default function VerticalNavBar() {
     };
 
     return (
-        <div className='fixed top-2 md:top-5 right-5 md:right-16 cursor-pointer rounded-full focus:outline-none focus-visible:bg-white/40'>
+        <div ref={container} className='fixed top-2 md:top-5 right-5 md:right-16 cursor-pointer rounded-full focus:outline-none focus-visible:bg-white/40'>
             <button className='block rounded-full' onClick={toggleMenu}>
                 <img 
+                    ref={circle1}
                     src={require('../images/blxck_round_logo.png')}  
                     alt='click to toggle a contact menu' 
                     className='h-10 w-10'
                 />
             </button>
-            <div ref={container} className={`z-50 absolute right-0 w-10 h-0`}>
+            <div ref={menuContainer} className={`z-50 absolute right-0 w-10 h-0`}>
                 <div className="h-full w-full flex flex-col items-center gap-6">
                     <div ref={menu} className='h-full w-full bg-white/20 rounded-md flex flex-col justify-around gap-4 items-center overflow-hidden'>
                         <a 
@@ -80,6 +95,7 @@ export default function VerticalNavBar() {
                         </a>
                     </div>
                     <img 
+                        ref={circle2}
                         onClick={toggleMenu}
                         src={require('../images/blxck_round_logo.png')}  
                         alt='click to toggle a contact menu' 

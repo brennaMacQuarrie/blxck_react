@@ -52,11 +52,11 @@ export default function ContactSection() {
               blxckmarketing@gmail.com
             </WidgetButton>
             <WidgetButton 
-              href="tel:780-722-0646"
+              href="tel:+17807220646"
               alt="click to initiate a phone call"
               Icon={BsTelephone}
             >
-              (780) 722-0646
+              +1 (780) 722-0646
             </WidgetButton>
             <WidgetButton 
               href='https://www.google.com/maps/place/BLXCK+marketing/@53.5529256,-113.5247396,15z/data=!4m2!3m1!1s0x0:0x1186dd76a63a1c34?sa=X&ved=2ahUKEwj0p4n54dT9AhUnIjQIHex-BcQQ_BJ6BAhgEAg'

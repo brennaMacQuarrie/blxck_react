@@ -67,7 +67,7 @@ export default function Services() {
         .to(service.current, {
             scale: 1,
             transformOrigin: '50% 20%',
-            duration: 0.8,
+            duration: 0.6,
         })
         .to(text.current, {
             autoAlpha: 1,
@@ -95,13 +95,13 @@ export default function Services() {
 
     return (
          <div className='relative my-10 w-full min-h-[50vh] overflow-hidden grid grid-cols-2 lg:grid-cols-3 p-0 sm:p-4'>
-            <button ref={service} onClick={() => handleClose(activeItem.id)} className='z-[-1] opacity-0 invisible fixed top-0 left-0 w-full h-full scale-0 flex flex-col pt-32 items-center text-xl font-Russo bg-black'>
-                <div ref={text} className='opacity-0 invisible h-0'>
+            <button ref={service} onClick={() => handleClose(activeItem.id)} className='z-[-1] opacity-0 invisible fixed top-0 left-0 w-full h-screen scale-0 text-xl bg-black'>
+                <div ref={text} className='opacity-0 invisible flex flex-col justify-center h-fit'>
                     <MoonAnimation size="80px" isActive={true} />
-                    <h3 className='text-xl md:text-3xl mb-4 text-blx-blue font-SpaceAge'>
+                    <h3 className='text-xl sm:text-3xl mb-4 text-blx-blue font-SpaceAge'>
                         {activeItem.title}
                     </h3>
-                    <p className='text-base sm:text-lg lg:text-xl px-8 md:px-32'>
+                    <p className='text-base sm:text-lg lg:text-xl px-8 md:px-52'>
                         {activeItem.content}
                     </p>
                 </div>
