@@ -17,17 +17,18 @@ export default function NavBar () {
                 duration: 0.3,
                 ease: "sine.out"
             })
+            
+            ScrollTrigger.create({
+                start: "top top",
+                end: 99999,
+                onUpdate: (self) => {
+                  self.direction === -1 ? animation.current.play() : animation.current.reverse()
+                }
+              });
         }, container);
         return () => ctx.revert();
     }, []);
 
-    ScrollTrigger.create({
-        start: "top top",
-        end: 99999,
-        onUpdate: (self) => {
-          self.direction === -1 ? animation.current.play() : animation.current.reverse()
-        }
-      });
 
     return (
         <div ref={container} className='z-[777] fixed top-0 w-full px-5 md:px-16 py-2 md:py-4 flex justify-between items-center'>

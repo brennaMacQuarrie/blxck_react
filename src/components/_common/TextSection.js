@@ -15,7 +15,6 @@ export default function TextSection(props) {
                 duration: 6, 
                 scrollTrigger: {
                     trigger: container.current,
-                    toggleActions: "restart pause resume reset",
                     scrub: true,
                 },
             });

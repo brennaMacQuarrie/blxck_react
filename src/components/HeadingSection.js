@@ -8,7 +8,6 @@ export default function HeadingSection() {
     const container = useRef();
     const moveRight = useRef();
     const moveLeft = useRef();
-    const toggleActions = "restart pause resume reset"
 
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
@@ -17,7 +16,6 @@ export default function HeadingSection() {
                 opacity: 0,
                 duration: 8, 
                 scrollTrigger: {
-                    toggleActions,
                     scrub: true,
                 },
             })
@@ -26,7 +24,6 @@ export default function HeadingSection() {
                 opacity: 0,
                 duration: 8, 
                 scrollTrigger: {
-                    toggleActions,                    
                     scrub: true,
                 },
             })

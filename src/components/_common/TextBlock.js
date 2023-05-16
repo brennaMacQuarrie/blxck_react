@@ -8,7 +8,6 @@ export default function TextBlock({ textBlockOne, textBlockTwo}) {
   const container = useRef();
  
   useLayoutEffect(() => {
-    
     let ctx = gsap.context(() => {
       const blocks = gsap.utils.toArray('.block');
       blocks.forEach(block => {
