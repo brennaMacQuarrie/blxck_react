@@ -1,10 +1,7 @@
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useLayoutEffect } from "react";
 
 export default function TextSection(props) {
-    gsap.registerPlugin(ScrollTrigger);
-
     const container = useRef();
     const heading = useRef();
 
@@ -12,7 +9,7 @@ export default function TextSection(props) {
         let ctx = gsap.context(() => {
             gsap.to(heading.current, {
                 x: 0,
-                duration: 6, 
+                duration: 5, 
                 scrollTrigger: {
                     trigger: container.current,
                     scrub: true,
@@ -24,7 +21,7 @@ export default function TextSection(props) {
     });
 
     return (
-        <div ref={container} className="min-h-[80vh] h-fit flex flex-col justify-center w-full bg-black text-white h-fit text-center">
+        <div ref={container} className="min-h-[80vh] h-fit py-6 flex flex-col justify-center w-full bg-black text-white text-center">
             {props.title && <h3 ref={heading} className={`${props.direction === 'left' ? 'translate-x-20 sm:translate-x-[-600px]' : 'translate-x-20 sm:translate-x-[600px]'} relative text-xl sm:text-2xl md:text-3xl leading-none font-SpaceAge white-stroke font-bold`}>
                 {props.title} <span className='yellow-stroke'>/<span>/</span></span>
             </h3>}

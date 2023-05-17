@@ -34,7 +34,7 @@ export default function NavBar () {
         <div ref={container} className='z-[777] fixed top-0 w-full px-5 md:px-16 py-2 md:py-4 flex justify-between items-center'>
             <a ref={nav} className='group block font-SpaceAge text-base sm:text-lg tracking-widest' href="#home">
                 <span className='text-blx-gold'>Blxck</span>
-                <span className='white-stroke group-hover:text-white'>maRketing</span>
+                <span className='white-stroke transition-color duration-500 group-hover:text-white'>maRketing</span>
             </a>
             <VerticalNavBar />
         </div>

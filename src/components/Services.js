@@ -1,5 +1,4 @@
 import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
 import React, { useRef, useState } from 'react';
 import {
     WiMoonAltFull, WiMoonAltNew, WiMoonAltWaxingCrescent1,
@@ -50,7 +49,6 @@ const services = [
 
 
 export default function Services() {
-    gsap.registerPlugin(ScrollTrigger);
     const [activeItem, setActiveItem] = useState({});
 
     const service = useRef();

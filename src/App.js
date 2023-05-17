@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect } from 'react';
+import { lazy, Suspense } from 'react';
 import './App.css';
 import ContactSection from './components/ContactSection';
 import HeadingSection from './components/HeadingSection';
@@ -8,12 +8,13 @@ import Services from './components/Services';
 import Loader from './components/_common/Loader';
 import TextBlock from './components/_common/TextBlock';
 import TextSection from './components/_common/TextSection';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 const ImageSection = lazy(() => import('./components/_common/ImageSection'));
 
 function App() {
-  useEffect(() => {
+  gsap.registerPlugin(ScrollTrigger)
 
-  }, [])
   return (
     <Suspense fallback={<Loader />}>
       <div className="App overflow-hidden">
@@ -22,7 +23,7 @@ function App() {
 
         <TextSection title={'about us'} direction={'right'}>
           <TextBlock 
-            textBlockOne={"We are a canadian based advertising agency, but our clients and reach stretch around the globe. We believe that any business can succeed."}
+            textBlockOne={"We are a Canadian advertising agency, but our clients and reach stretch around the globe. We believe any business can succeed."}
             textBlockTwo={"Our mission is to heighten the potency of your marketing efforts by giving you the most effective ad stragety possible."}
           />
         </TextSection>
@@ -33,7 +34,7 @@ function App() {
 
         <TextSection title={'what we do'} direction={'left'}>
           <TextBlock 
-            textBlockOne={"We support you by expanding or developing your business's organic growth and brand recognition."}
+            textBlockOne={"We support you by developing or expanding your business's organic growth and brand recognition."}
             textBlockTwo={"We do this by supplementing your natural appeal with our expertise in ad buys."}
           />
         </TextSection>

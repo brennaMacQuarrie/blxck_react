@@ -1,7 +1,7 @@
 export default function ImageSection(props) {
     return (
         <div 
-            className='ImageSecton relative w-full h-screen min-h-fit bg-local sm:bg-fixed bg-cover' 
+            className='ImageSecton relative w-full min-h-screen bg-cover bg-local sm:bg-fixed' 
             style={{ 
                 backgroundImage: `url(${props.image})`,
                 backgroundRepeat: 'no-repeat',
