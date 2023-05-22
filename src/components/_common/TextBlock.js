@@ -12,11 +12,12 @@ export default function TextBlock({ textBlockOne, textBlockTwo}) {
         gsap.from(block, { 
           y: 60,
           opacity: 0,
-          duration: 0.5,
+          duration: 0.8,
           scrollTrigger: {
             trigger: block,
             scrub: 1,
-            staggered: true
+            staggered: true,
+            end: "top middle"
           }
         })
       });

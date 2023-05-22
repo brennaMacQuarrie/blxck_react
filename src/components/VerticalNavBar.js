@@ -61,7 +61,7 @@ export default function VerticalNavBar() {
             <button className='block rounded-full' onClick={toggleMenu}>
                 <img 
                     ref={circle1}
-                    src={require('../images/blxck_round_logo.png')}  
+                    src="./blxck_round_logo.png"
                     alt='click to toggle a contact menu' 
                     className='h-10 w-10'
                 />
@@ -97,7 +97,7 @@ export default function VerticalNavBar() {
                     <img 
                         ref={circle2}
                         onClick={toggleMenu}
-                        src={require('../images/blxck_round_logo.png')}  
+                        src="./blxck_round_logo.png" 
                         alt='click to toggle a contact menu' 
                         className='h-7 w-7'
                     />

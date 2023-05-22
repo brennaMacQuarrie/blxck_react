@@ -28,9 +28,7 @@ function App() {
           />
         </TextSection>
 
-        <Suspense fallback={<Loader />}>
-          <ImageSection image={'./greg-rakozy-oMpAz-DN-9I-unsplash.jpg'} />
-        </Suspense>
+        <ImageSection desktopURL="./LG_greg-rakozy-oMpAz-DN-9I-unsplash.jpg" mobileURL="./SM_greg-rakozy-oMpAz-DN-9I-unsplash.jpg" />
 
         <TextSection title={'what we do'} direction={'left'}>
           <TextBlock 
@@ -39,17 +37,13 @@ function App() {
           />
         </TextSection>
 
-        <Suspense fallback={<Loader />}>
-          <ImageSection image={'./nasa-Q1p7bh3SHj8-unsplash.jpg'} />
-        </Suspense>
+        <ImageSection desktopURL="./LG_nasa-Q1p7bh3SHj8-unsplash.jpg" mobileURL="./SM_nasa-Q1p7bh3SHj8-unsplash.jpg" />
 
         <TextSection title={'our services'} direction={'right'}>
           <Services />
         </TextSection>
 
-        <Suspense fallback={<Loader />}>
-          <ImageSection image={'./space-illustration-with-moon-and-planet-in-space-2021-08-26-17-37-33-utc.jpg'} />
-        </Suspense>
+        <ImageSection desktopURL='./LG_space-illustration-with-moon-and-planet-in-space-2021-08-26-17-37-33-utc.jpg' mobileURL='SM_space-illustration-with-moon-and-planet-in-space-2021-08-26-17-37-33-utc.jpg' />
 
         <ContactSection />      
         

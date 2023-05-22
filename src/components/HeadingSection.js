@@ -1,6 +1,6 @@
 import { gsap } from "gsap"
-import { Suspense, useLayoutEffect, useRef } from "react";
-import Loader from "./_common/Loader";
+import { useLayoutEffect, useRef } from "react";
+import AsyncImage from "./_common/AsyncImage";
 
 export default function HeadingSection() {
     const container = useRef();
@@ -20,8 +20,11 @@ export default function HeadingSection() {
         return () => ctx.revert();
     }, []);
     
-    return (     <Suspense fallback={<Loader />}>
-    <header ref={container} className="App-header flex flex-col items-center pt-60 md:pt-0 md:justify-center" id="home">
+    return (     
+      <header ref={container} className="App-header relative flex flex-col items-center pt-60 md:pt-0 md:justify-center" id="home">
+        <AsyncImage src="./SM_earth4.jpg" alt="Black marketing image header of the earth from space." className="absolute top-0 h-full block lg:hidden" />
+        <AsyncImage src="./LG_earth4.png" alt="Black marketing image header of the earth from space." className="absolute top-0 h-full hidden lg:block" />
+
         <div className='px-12 sm:px-4'>
           <h1 className='text-4xl sm:text-5xl lg:text-6xl font-Blackout leading-none'>
             <p ref={heading} className={`translate-y-20 sm:translate-y-[800px] opacity-0`}>Grow your<br/>
@@ -29,6 +32,5 @@ export default function HeadingSection() {
           </h1>
         </div>
       </header>
-      </Suspense>
     )
 }

@@ -8,6 +8,7 @@ import ContactModal from './ContactModal';
 import { useEffect, useRef, useState } from 'react';
 import CircleButton from './_common/CircleButton';
 import WidgetButton from './_common/WidgetButton';
+import AsyncImage from './_common/AsyncImage';
 
 export default function ContactSection() {
     const [isOpen, setIsOpen] = useState(false);
@@ -41,9 +42,12 @@ export default function ContactSection() {
 
     return (
     <TextSection title={'Contact'} direction={'left'}>
-        <div className='ContactSection h-screen min-h-fit flex flex-col gap-16 sm:gap-24 justify-center items-center'>
+        <div className='ContactSection relative h-screen min-h-fit flex flex-col gap-16 sm:gap-24 justify-center items-center'>
+          <AsyncImage src="./SM_thing3.jpg" alt="A satellite in space." className="absolute bottom-0 h-full block lg:hidden" />
+          <AsyncImage src="./LG_thing3.jpg" alt="A satellite in space." className="absolute bottom-0 h-full hidden lg:block" />
+
           <CircleButton triggerEvent={toggleModal} />
-          <div className='grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-0 pb-40'>
+          <div className='z-20 grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-0 pb-40'>
             <WidgetButton 
               href="mailto:blxckmarketing@gmail.com"
               alt="click to send us an email"
