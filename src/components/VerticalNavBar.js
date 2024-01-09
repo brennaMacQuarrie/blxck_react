@@ -61,7 +61,7 @@ export default function VerticalNavBar() {
             <button className='block rounded-full' onClick={toggleMenu}>
                 <img 
                     ref={circle1}
-                    src="./blxck_round_logo.png"
+                    src="./blxck_ring_small.png"
                     alt='click to toggle a contact menu' 
                     className='h-10 w-10'
                 />
@@ -73,7 +73,7 @@ export default function VerticalNavBar() {
                             aria-label='click to initiate a phone call' 
                             target='_blank' 
                             rel='noopener noreferrer' 
-                            href="tel:780-722-0646" 
+                            href="tel:+17807220646" 
                         >
                             <BsTelephone className={`h-0 text-white/70 hover:text-white focus:text-white`}/>
                         </a>
@@ -97,7 +97,7 @@ export default function VerticalNavBar() {
                     <img 
                         ref={circle2}
                         onClick={toggleMenu}
-                        src="./blxck_round_logo.png" 
+                        src="./blxck_ring_small.png"
                         alt='click to toggle a contact menu' 
                         className='h-7 w-7'
                     />

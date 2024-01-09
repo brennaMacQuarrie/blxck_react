@@ -18,7 +18,7 @@ export default function RocketShip() {
         <div className='fixed bottom-4 left-4 z-50'>
             <button className='block flex justify-center items-center rounded-full focus:outline-none focus:bg-white/40' onClick={sendRocket}>
                 <img 
-                    src="./blxck_round_logo.png" 
+                    src="./blxck_round_logo_sm.png" 
                     alt='click for a rocket ship animation!' 
                     className="h-7 w-7"
                 />
